@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel panel-heading clearfix">
+          <div class="pull-left">
+            <h4>Contacts</h4>
+          </div>        
+          <span class="pull-right">
+            <button class="btn btn-success">New Contact</button>          
+          </span>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-12">
+              <!-- Anchor tag was placed here. this anchor tag contained a loop that went throught the array -->
+              <!-- And displayed the name and image. It separate code we created contact item and move anchor tag -->
+
+
+              <!-- in order to loop through the list and display result we create a for loop calling the list in our ts file -->
+              <!-- Using property binding, we call the contact property -->
+             <cms-contact-item *ngFor="let contactz of contacts" [contact]="contactz"></cms-contact-item>
+
+             <!-- *ngFor="let contactz of contacts" 
+             [contact]="contactz"
+             (contactSelected)="onSelected(contactz)"> -->
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,18 @@
+<div class="panel panel-default contact-detail-panel">
+    <div class="panel-heading col-sm-12" style="height: 100px;">
+        <h3>{{detail.name}}</h3>
+        <div class="col-sm-4 contact-list-imgs">
+            <img class="img-responsive" src="{{ detail.imageURL }}" alt="{{ detail.name }}">
+        </div>
+        <span class="pull-right">
+        <div class="contact-detail-btns">
+            <a href="#" role="button" class="btn btn-primary">Edit</a>
+            <a href="#" role="button" class="btn btn-danger">Delete</a>
+        </div>
+        </span>
+    </div>
+    <div class="panel-body">
+        <p>Email: {{detail.email}}</p>
+        <p>Phone: {{detail.phone}}</p>
+    </div>
+</div>
