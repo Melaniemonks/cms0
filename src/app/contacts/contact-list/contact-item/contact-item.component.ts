@@ -15,7 +15,7 @@ export class ContactItemComponent implements OnInit {
    @Input() contact: Contact;
 
   // //Used when contact is selected
-  // @Output() contactSelected = new EventEmitter<void>();
+  @Output() contactSelected = new EventEmitter<void>();
   
   
   
@@ -28,8 +28,8 @@ export class ContactItemComponent implements OnInit {
 
   // Used for on selection of contact
 
-  // onSelected(){
-  //   this.contactSelected.emit();
-  // }
+   onSelected(){
+     this.contactSelected.emit();
+   }
 
 }

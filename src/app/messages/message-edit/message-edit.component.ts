@@ -12,7 +12,7 @@ export class MessageEditComponent implements OnInit {
 @ViewChild('subject') subjectRef: ElementRef;
 
 @Output() addMessageEvent = new EventEmitter<Message>();
-currentSender = 'Melanie';
+currentSender:string = 'Melanie';
 
   constructor() { }
 
@@ -22,13 +22,14 @@ currentSender = 'Melanie';
   onSendMessage(){
     let subject = this.subjectRef.nativeElement.value;
     let msgText = this.msgTextRef.nativeElement.value;
-    let message = new Message(1, subject, msgText, this.currentSender);
+    let message = new Message(0, subject, msgText, this.currentSender);
 
     this.addMessageEvent.emit(message)
 
   }
 
   onClear(){
+    this.subjectRef.nativeElement.value = " ";
     this.msgTextRef.nativeElement.value = ' ';
   }
 

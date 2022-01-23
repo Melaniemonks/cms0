@@ -2,7 +2,7 @@
 <!-- Anchor tag was move here, however the "contact" object cannot be found in this component.-->
 <!-- We had to use the @input to access it from the contact-list component which can be found in .ts file -->
 
-<a href="#" class="list-group-item clearfix"  >
+<a href="#" class="list-group-item clearfix" (click)="onSelected()" >
     <div class="pull-left">
       <h4 class="list-group-item-heading">{{ contact.name }}</h4>
     </div>

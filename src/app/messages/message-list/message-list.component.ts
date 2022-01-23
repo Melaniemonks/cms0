@@ -12,7 +12,7 @@ export class MessageListComponent implements OnInit {
 messages: Message[] = [
   new Message(1, 'Maths', 'This is maths', 'Melanie'),
   new Message(2, 'ENG', 'This is ENG', 'Harold'),
-  new Message(3, 'COMP', 'This is COMP', 'Russell')
+  new Message(3, 'COMP', 'This is COMP', 'Russell'),
 ]
   constructor() { }
 
