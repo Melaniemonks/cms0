@@ -4,7 +4,7 @@
 
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-import { Contact } from '../contacts.model'; 
+import { Contact } from '../../contacts.model'; 
 
 @Component({
   selector: 'cms-contact-item',

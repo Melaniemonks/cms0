@@ -18,7 +18,8 @@
 
               <!-- in order to loop through the list and display result we create a for loop calling the list in our ts file -->
               <!-- Using property binding, we call the contact property -->
-             <cms-contact-item *ngFor="let contactz of contacts" [contact]="contactz"></cms-contact-item>
+             <cms-contact-item *ngFor="let contactz of contacts" [contact]="contactz" 
+             (contactSelected)="onSelected(contactz)"></cms-contact-item>
 
              <!-- *ngFor="let contactz of contacts" 
              [contact]="contactz"

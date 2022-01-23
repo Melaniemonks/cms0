@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cms';
+  loadedFeature = 'documents';
+
+  switchView(selectedFeature: string){
+    this.loadedFeature = selectedFeature;
+  }
 }
+
