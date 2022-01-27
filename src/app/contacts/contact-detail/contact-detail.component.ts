@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DetachedRouteHandle } from '@angular/router';
 import { Contact } from '../contacts.model';
 
 @Component({
