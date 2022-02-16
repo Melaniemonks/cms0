@@ -13,6 +13,7 @@ import { Contact } from '../../contacts.model';
 })
 export class ContactItemComponent implements OnInit {
    @Input() contact: Contact;
+   @Input() id: string;
 
   // //Used when contact is selected
   @Output() contactSelected = new EventEmitter<void>();

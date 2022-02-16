@@ -6,7 +6,7 @@
             <h4>Contacts</h4>
           </div>        
           <span class="pull-right">
-            <button class="btn btn-success">New Contact</button>          
+            <button routerLink="new" class="btn btn-success">New Contact</button>          
           </span>
         </div>
         <div class="panel-body">
@@ -20,8 +20,8 @@
               <!-- Using property binding, we call the contact property -->
              <cms-contact-item 
              *ngFor="let contactz of contacts" 
-             [contact]="contactz" 
-             (contactSelected)="onContactSelected(contactz)"></cms-contact-item>
+             [contact]="contactz"
+             ></cms-contact-item>
 
              <!-- *ngFor="let contactz of contacts" 
              [contact]="contactz"

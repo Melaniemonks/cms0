@@ -9,10 +9,6 @@ import { ContactService } from './contacts/contact.service';
 })
 export class AppComponent {
   title = 'cms';
-  loadedFeature = 'documents';
-
-  switchView(selectedFeature: string){
-    this.loadedFeature = selectedFeature;
-  }
+ 
 }
 
