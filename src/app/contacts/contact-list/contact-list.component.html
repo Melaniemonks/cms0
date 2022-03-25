@@ -13,17 +13,9 @@
           <div class="row">
             <div class="col-xs-12">
 
-              <cms-contact-item *ngFor="let contact of contacts" [contact]="contact">
-                
-                
-                
-              </cms-contact-item>
+              
               <!-- Anchor tag was placed here. this anchor tag contained a loop that went throught the array -->
-              <!-- And displayed the name and image. It separate code we created contact item and move anchor tag -->
-              cdkDropList
-              [cdkDropListData]="todo"
-              class="example-list"
-              (cdkDropListDropped)="drop($event)"
+             
 
               <!-- in order to loop through the list and display result we create a for loop calling the list in our ts file -->
               <!-- Using property binding, we call the contact property -->
