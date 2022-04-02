@@ -1,37 +1,39 @@
 <div class="row">
-    <div class="col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel panel-heading clearfix">
-          <div class="pull-left">
-            <h4>Contacts</h4>
-          </div>        
-          <span class="pull-right">
-            <button routerLink="new" class="btn btn-success">New Contact</button>          
-          </span>
+  <div class="col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="row">
+          <span class="title pad-left-right">Contacts</span>
         </div>
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-xs-12">
+        <div class="row">
+          <div class="input-group pull-left pad-left-right col-xs-7">
+            <input type="text" class="form-control" placeholder="Enter a search value" (keyup)="search(searchBox.value)" #searchBox>
+            <div class="glyphicon glyphicon-search input-group-addon" (click)="search(searchBox.value)"></div>
+          </div>
+          <div class="pull-right pad-left-right">
+            <a class="btn btn-success" [routerLink]="['new']">New Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-xs-12">
 
-              
-              <!-- Anchor tag was placed here. this anchor tag contained a loop that went throught the array -->
-             
 
-              <!-- in order to loop through the list and display result we create a for loop calling the list in our ts file -->
-              <!-- Using property binding, we call the contact property -->
-             <cms-contact-item 
-             *ngFor="let contactz of contacts" 
-             [contact]="contactz"
-             ></cms-contact-item>
+            <!-- Anchor tag was placed here. this anchor tag contained a loop that went throught the array -->
 
-             <!-- *ngFor="let contactz of contacts" 
+
+            <!-- in order to loop through the list and display result we create a for loop calling the list in our ts file -->
+            <!-- Using property binding, we call the contact property -->
+            <cms-contact-item *ngFor="let contactz of contacts  | contactsFilter:term" [contact]="contactz"></cms-contact-item>
+
+            <!-- *ngFor="let contactz of contacts" 
              [contact]="contactz"
              (contactSelected)="onSelected(contactz)"> -->
-              
-            </div>
+
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
